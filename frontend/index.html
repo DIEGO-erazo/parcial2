@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio de Transporte - Estimación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Estimador de Tarifas de Transporte</h1>
+            <p>Selecciona el tipo de vehículo e ingresa la distancia de tu viaje</p>
+        </header>
+
+        <section class="card-calculator">
+            <div class="form-group">
+                <label for="tipoVehiculo">Tipo de Vehículo:</label>
+                <select id="tipoVehiculo">
+                    <option value="motocicleta">Motocicleta (Económico)</option>
+                    <option value="automovil">Automóvil (Confort)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="distancia">Distancia a recorrer (km):</label>
+                <input type="number" id="distancia" min="0.1" step="0.1" placeholder="Ej. 10.5">
+            </div>
+
+            <button id="btnCalcular" onclick="calcularEstimacion()">Calcular estimación</button>
+
+            <div id="resultado" class="resultado-box hidden">
+                <h3>Resumen de Estimación</h3>
+                <p id="textoResumen"></p>
+                <p class="precio-final" id="textoPrecio"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
